@@ -1,0 +1,57 @@
+﻿{
+    "gpu":  {
+                "temp":  33.5,
+                "nombre":  "NVIDIA GeForce GTX 960",
+                "tag":  "4GB GDDR5",
+                "uso":  1
+            },
+    "discos":  [
+                   {
+                       "temp":  32,
+                       "maker":  "Western Digital",
+                       "nombre":  "WDC WD20EAAZ-22 [E:]",
+                       "size":  "1.8 TB",
+                       "letra":  "E:",
+                       "uso":  0,
+                       "tipo":  "HDD",
+                       "bus":  "SATA",
+                       "ext":  false
+                   },
+                   {
+                       "temp":  54,
+                       "maker":  "Crucial",
+                       "nombre":  "CT1000T705SSD3 [C:]",
+                       "size":  "932 GB",
+                       "letra":  "C:",
+                       "uso":  1,
+                       "tipo":  "SSD",
+                       "bus":  "NVMe",
+                       "ext":  false
+                   },
+                   {
+                       "temp":  37,
+                       "maker":  "Lexar",
+                       "nombre":  "Lexar SSD ARES [D:]",
+                       "size":  "1.9 TB",
+                       "letra":  "D:",
+                       "uso":  0.2,
+                       "tipo":  "SSD",
+                       "bus":  "NVMe",
+                       "ext":  false
+                   }
+               ],
+    "cpu":  {
+                "temp":  47.1,
+                "nombre":  "AMD Ryzen 7 9700X",
+                "tag":  "8C / 16T",
+                "uso":  3.6
+            },
+    "ram":  {
+                "tag":  "64GB DDR5",
+                "nombre":  "Corsair",
+                "porcentaje":  27.3,
+                "usada_gb":  16.9,
+                "temp":  40.2,
+                "total_gb":  61.7
+            }
+}
