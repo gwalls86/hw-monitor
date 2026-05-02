@@ -1,103 +1,111 @@
 # 🚀 Hardware Monitor PRO
 
-Una estación de monitoreo térmico y de rendimiento avanzada con estética **Cyberpunk**, diseñada para el seguimiento exhaustivo de CPU, GPU, RAM y múltiples unidades de almacenamiento de forma sencilla y elegante.
+Una estación de monitoreo térmico y de rendimiento de nivel profesional con estética **Cyberpunk**. Diseñada para ofrecer una visualización profunda y en tiempo real de CPU, GPU, RAM y múltiples unidades de almacenamiento con un impacto visual mínimo en el sistema.
 
-![Versión](https://img.shields.io/badge/version-2.6-cyan)
-![Platform](https://img.shields.io/badge/platform-Windows-blue)
-![Licencia](https://img.shields.io/badge/license-MIT-purple)
+![Versión](https://img.shields.io/badge/version-2.6-cyan?style=for-the-badge)
+![Platform](https://img.shields.io/badge/platform-Windows-blue?style=for-the-badge)
+![Python](https://img.shields.io/badge/python-3.10+-green?style=for-the-badge)
+![Licencia](https://img.shields.io/badge/license-MIT-purple?style=for-the-badge)
 
 ---
 
-## 🎨 Icono del Proyecto
+## 🎨 Identidad Visual
 
 <p align="center">
-  <img src="icon.png" width="200" alt="Hardware Monitor Icon">
+  <img src="icon.png" width="180" alt="Hardware Monitor Icon">  
 </p>
 
 ---
 
-## 🚀 Características Principales
+## ✨ Características Principales
 
-*   **VISTA EN VIVO (Humanizada)**: Visualización en tiempo real con barras de progreso dinámicas y sensores de temperatura críticos.
-*   **HISTORIAL DINÁMICO (Precision-Charts)**: Gráficos interactivos con escalado inteligente de **+/- 10 unidades** para una visualización máxima del detalle térmico.
-*   **PALETA DE 6 COLORES PRO**: Identificación instantánea mediante colores de alto contraste (Cyan, Púrpura, Naranja, Esmeralda, Rosa y Ámbar).
-*   **MEMORIA PERSISTENTE**: El sistema recuerda mediante `localStorage` tu última vista, el intervalo de tiempo (1m a 1h) y qué sensores has decidido ocultar en la gráfica.
-*   **TELEMETRÍA MULTI-DISCO**: Los discos (C, D, E...) se detectan y ordenan alfabéticamente de forma automática.
-*   **DISEÑO PREMIUM**: Tipografía **Inter** para UI y **JetBrains Mono** para datos técnicos, con efectos de "glassmorphism" y neón.
-
----
-
-## 🛠️ Requisitos del Sistema
-
-1.  **Windows 10/11** con PowerShell habilitado.
-2.  **Python 3.x** instalado.
-3.  **HWiNFO64** instalado y configurado (ver sección abajo).
+*   **⚡ Vista en Vivo (Ultra-Responsive)**: Datos actualizados cada segundo con barras de progreso dinámicas que cambian de color según la carga.
+*   **📊 Analítica Avanzada**: Gráficos interactivos con escalado inteligente (+/- 10 unidades) para detectar fluctuaciones térmicas mínimas.
+*   **💾 Persistencia de Usuario**: El sistema utiliza `localStorage` para recordar tu configuración, intervalo de tiempo (1m a 1h) y preferencias de visualización.
+*   **📂 Telemetría Inteligente**: Detección automática y ordenado alfabético de todas las unidades de almacenamiento (NVMe, SSD, HDD).
+*   **⚙️ Umbrales Personalizables**: Ajusta los niveles de alerta (Medio, Alto, Crítico) directamente desde la interfaz web.
+*   **💎 Diseño Premium**: Interfaz moderna con efectos de *glassmorphism*, tipografía **Inter** y **JetBrains Mono** para máxima legibilidad.
 
 ---
 
-## ⚙️ Configuración Obligatoria (HWiNFO64)
+## 🛠️ Requisitos Técnicos
 
-Para que el dashboard pueda leer los datos, es **imprescindible** configurar HWiNFO64 de la siguiente manera:
+| Requisito | Detalle |
+| :--- | :--- |
+| **Sistema Operativo** | Windows 10 / 11 (64-bit) |
+| **Python** | Versión 3.10 o superior (Agregado al PATH) |
+| **HWiNFO64** | v7.0 o superior (Motor de sensores) |
+| **Permisos** | Ejecución de PowerShell habilitada |
 
-1.  **Modo de Inicio**: Al abrir HWiNFO, selecciona únicamente la casilla **"Sensors-only"**.
+---
+
+## ⚙️ Configuración Crítica de HWiNFO64
+
+Para que el Dashboard funcione correctamente, HWiNFO64 **debe** estar configurado siguiendo estos pasos exactos:
+
+1.  **Inicio**: Ejecuta HWiNFO64. En la ventana inicial, marca **únicamente** la casilla **"Sensors-only"**.
 2.  **Memoria Compartida**:
     *   Ve a `Settings` -> `General`.
-    *   Asegúrate de que la opción **"Shared Memory Support"** esté **activada** (marcada).
-    *   *Nota: En la versión gratuita de HWiNFO, esta opción se desactiva tras 12 horas; simplemente reinicia la aplicación para reactivarla.*
-3.  **Ventana**: Se recomienda marcar **"Minimize Main Window on Startup"** y **"Minimize Sensors on Startup"** para que no estorbe en el escritorio.
+    *   Activa la casilla **"Shared Memory Support"**.
+    *   > [!NOTE]
+    *   > En la versión gratuita de HWiNFO, esta opción se desactiva tras 12 horas. Solo debes cerrar y volver a abrir la aplicación para reactivarla.
+3.  **Optimización**: Se recomienda marcar **"Minimize Main Window on Startup"** y **"Minimize Sensors on Startup"** para que el sistema corra silenciosamente en segundo plano.
 
 ---
 
-## 📦 Instalación y Arranque
+## 🚀 Guía de Instalación Paso a Paso
 
-1.  Configura HWiNFO64 según las instrucciones anteriores.
-2.  Asegúrate de que todos los archivos estén en la carpeta raíz.
-3.  Ejecuta el orquestador principal:
-    ```bash
-    start_monitor.bat
-    ```
-    *Este comando se encargará de limpiar procesos antiguos, iniciar el motor de telemetría y levantar el servidor web automáticamente.*
+### 1. Preparación del Entorno
+Asegúrate de tener Python instalado y HWiNFO64 abierto con la configuración mencionada arriba. Puedes usar el instalador `hwi64_846.exe` incluido en la carpeta si no lo tienes.
 
-3.  Abre tu navegador en: `http://localhost:8000`.
+### 2. Ejecución del Orquestador
+Haz clic derecho sobre el archivo `start_monitor.bat` y selecciona **"Ejecutar como administrador"**.
+> [!IMPORTANT]
+> Los permisos de administrador son esenciales la primera vez para permitir que PowerShell acceda a los contadores de rendimiento de bajo nivel.
 
----
-
-## 🎮 Guía de Usuario
-
-
-### Navegación
-*   **Panel TIEMPO REAL**: Muestra el estado actual de los componentes con barras de progreso y colores de alerta dinámicos.
-*   **Panel ESTADÍSTICAS**: Muestra la evolución térmica. Puedes alternar rangos desde **1 MIN** (análisis de picos) hasta **1 HORA** (tendencias).
-
-### Control de Gráficos
-*   **Ocultar Datos**: Haz clic en la leyenda superior para ocultar/mostrar sensores. Esta selección es persistente entre sesiones.
-*   **Escalado Dinámico**: La gráfica se ajusta automáticamente al valor máximo y mínimo visible, añadiendo un margen de 10 unidades para mejorar la legibilidad.
+### 3. Acceso al Dashboard
+El script abrirá automáticamente tu navegador predeterminado. Si no ocurre, navega manualmente a:
+👉 `http://localhost:8000/monitor.html`
 
 ---
 
-## 🏗️ Arquitectura Técnica
+## 📂 Estructura del Proyecto
 
-1.  **`hwmonitor.ps1`**: Lee los sensores de hardware y genera el JSON de telemetría.
-2.  **`server.py`**: Servidor ligero en Python que gestiona los datos y el buffer de historial.
-3.  **`monitor.html`**: Interfaz visual avanzada desarrollada con Vanilla JS y Chart.js.
-
----
-
-## ⚠️ Solución de Problemas
-
-*   **¿No se ven las temperaturas?**: Ejecuta `start_monitor.bat` como Administrador la primera vez para asegurar el acceso a los contadores de hardware.
-*   **Estado "SINCRONIZANDO" persistente**: Verifica que el servidor Python esté corriendo y que no haya firewalls bloqueando el puerto 8000.
-
----
-
-> **Nota**: Este proyecto ha sido diseñado para ofrecer una experiencia visual premium, ideal para monitores secundarios pequeños o setups gaming de alto nivel.
+```text
+.
+├── data/               # Archivos JSON de telemetría en tiempo real
+├── hwi64_846.exe       # Instalador de HWiNFO64 (v8.46)
+├── monitor.html        # Interfaz visual del Dashboard
+├── server.py           # Servidor web local ligero (Python)
+├── hwmonitor.ps1       # Motor de extracción de datos (PowerShell)
+├── start_monitor.bat   # Script de arranque automático
+├── icon.png            # Icono oficial del proyecto
+└── icon.ico            # Icono para ejecutables de Windows
+```
 
 ---
 
-## 📝 Notas de Versión
-- **Versión**: 2.6
+## ⚠️ Solución de Problemas Comunes
+
+**❌ El estado se queda en "SINCRONIZANDO"**
+- Verifica que HWiNFO64 esté abierto y con el **"Shared Memory Support"** activado.
+- Asegúrate de que el script de PowerShell (`hwmonitor.ps1`) no esté siendo bloqueado por tu antivirus.
+
+**❌ No se puede abrir la página web**
+- Comprueba que el puerto 8000 no esté siendo usado por otra aplicación.
+- Ejecuta `python --version` en una terminal para confirmar que Python está bien instalado.
+
+**❌ Faltan sensores o unidades**
+- Ejecuta el script como Administrador para garantizar el acceso total al hardware.
+
+---
+
+## 📝 Información Adicional
+
 - **Autor**: gwalls86
-- **Tecnologías**: Python, PowerShell, HTML/JS (Vanilla), HWiNFO64.
+- **Tecnologías**: Python, PowerShell API, HTML5/CSS3 (Vanilla JS), Chart.js.
+- **Versión**: 2.6 (Actualización de Estabilidad)
 
 ---
-*Desarrollado por gwalls86*
+*Desarrollado por **gwalls86***
+
