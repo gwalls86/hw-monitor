@@ -31,14 +31,28 @@ Una estación de monitoreo térmico y de rendimiento avanzada con estética **Cy
 
 1.  **Windows 10/11** con PowerShell habilitado.
 2.  **Python 3.x** instalado.
-3.  **HWiNFO64** o soporte de sensores WMI activo.
+3.  **HWiNFO64** instalado y configurado (ver sección abajo).
+
+---
+
+## ⚙️ Configuración Obligatoria (HWiNFO64)
+
+Para que el dashboard pueda leer los datos, es **imprescindible** configurar HWiNFO64 de la siguiente manera:
+
+1.  **Modo de Inicio**: Al abrir HWiNFO, selecciona únicamente la casilla **"Sensors-only"**.
+2.  **Memoria Compartida**:
+    *   Ve a `Settings` -> `General`.
+    *   Asegúrate de que la opción **"Shared Memory Support"** esté **activada** (marcada).
+    *   *Nota: En la versión gratuita de HWiNFO, esta opción se desactiva tras 12 horas; simplemente reinicia la aplicación para reactivarla.*
+3.  **Ventana**: Se recomienda marcar **"Minimize Main Window on Startup"** y **"Minimize Sensors on Startup"** para que no estorbe en el escritorio.
 
 ---
 
 ## 📦 Instalación y Arranque
 
-1.  Asegúrate de que todos los archivos estén en la carpeta raíz.
-2.  Ejecuta el orquestador principal:
+1.  Configura HWiNFO64 según las instrucciones anteriores.
+2.  Asegúrate de que todos los archivos estén en la carpeta raíz.
+3.  Ejecuta el orquestador principal:
     ```bash
     start_monitor.bat
     ```
