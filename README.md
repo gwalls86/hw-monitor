@@ -1,4 +1,4 @@
-# 🚀 Hardware Monitor PRO — Ultra Dashboard
+# 🚀 Hardware Monitor PRO
 
 Una estación de monitoreo térmico y de rendimiento avanzada con estética **Cyberpunk**, diseñada para el seguimiento exhaustivo de CPU, GPU, RAM y múltiples unidades de almacenamiento de forma sencilla y elegante.
 
