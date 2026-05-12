@@ -102,7 +102,6 @@ El script abrirá automáticamente tu navegador predeterminado. Si no ocurre, na
 
 ## 📝 Información Adicional
 
-- **Autor**: gwalls86
 - **Tecnologías**: Python, PowerShell API, HTML5/CSS3 (Vanilla JS), Chart.js.
 - **Versión**: 2.6 (Actualización de Estabilidad)
 
