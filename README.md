@@ -2,10 +2,10 @@
 
 Una estación de monitoreo térmico y de rendimiento de nivel profesional con estética **Cyberpunk**. Diseñada para ofrecer una visualización profunda y en tiempo real de CPU, GPU, RAM y múltiples unidades de almacenamiento con un impacto visual mínimo en el sistema.
 
-![Versión](https://img.shields.io/badge/version-2.6-cyan?style=for-the-badge)
-![Platform](https://img.shields.io/badge/platform-Windows-blue?style=for-the-badge)
-![Python](https://img.shields.io/badge/python-3.10+-green?style=for-the-badge)
-![Licencia](https://img.shields.io/badge/license-MIT-purple?style=for-the-badge)
+![Versión](https://img.shields.io/badge/version-2.6-cyan)
+![Platform](https://img.shields.io/badge/platform-Windows-blue)
+![Python](https://img.shields.io/badge/python-3.10+-green)
+![Licencia](https://img.shields.io/badge/license-MIT-purple)
 
 ---
 
