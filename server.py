@@ -66,7 +66,17 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
                 except Exception as e:
                     self.send_error(500, f"Error leyendo datos: {str(e)}")
             else:
-                self.send_error(404, "Archivo no encontrado")
+                self.send_response(200)
+                self.send_header('Content-type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                default_data = {
+                    "cpu": {"temp": "N/A", "uso": 0, "nombre": "Cargando...", "tag": "N/A"},
+                    "ram": {"temp": "N/A", "porcentaje": 0, "nombre": "Cargando...", "tag": "N/A"},
+                    "gpu": {"temp": "N/A", "uso": 0, "nombre": "Cargando...", "tag": "N/A"},
+                    "discos": []
+                }
+                self.wfile.write(json.dumps(default_data).encode('utf-8'))
             return
 
         elif self.path == '/history':

@@ -1,4 +1,4 @@
-# 🚀 Hardware Monitor PRO
+# Hardware Monitor PRO
 
 Una estación de monitoreo térmico y de rendimiento de nivel profesional con estética **Cyberpunk**. Diseñada para ofrecer una visualización profunda y en tiempo real de CPU, GPU, RAM y múltiples unidades de almacenamiento con un impacto visual mínimo en el sistema.
 
@@ -9,7 +9,7 @@ Una estación de monitoreo térmico y de rendimiento de nivel profesional con es
 
 ---
 
-## 🎨 Identidad Visual
+## 🎨 Icono del Proyecto
 
 <p align="center">
   <img src="icon.png" width="180" alt="Hardware Monitor Icon">  
